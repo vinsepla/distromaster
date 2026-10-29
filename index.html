@@ -3,15 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Web</title>
+    <title>Distromaster | Soluciones Tecnológicas</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f4f4f9; }
-        h1 { color: #333; }
-        p { color: #666; font-size: 18px; }
+        /* Estilos Base modernos */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; line-height: 1.6; }
+        
+        /* Contenedor Principal */
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+        
+        /* Encabezado animado */
+        header { margin-bottom: 60px; padding: 40px 20px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border-radius: 12px; border: 1px solid #334155; }
+        h1 { font-size: 3rem; color: #38bdf8; margin-bottom: 10px; font-weight: 800; }
+        p.subtitle { font-size: 1.2rem; color: #94a3b8; }
+        
+        /* Grilla de Características / Servicios */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }
+        .card { background-color: #1e293b; padding: 30px; border-radius: 8px; text-align: left; border: 1px solid #334155; transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); border-color: #38bdf8; }
+        .card h3 { font-size: 1.4rem; color: #38bdf8; margin-bottom: 12px; }
+        .card p { color: #94a3b8; font-size: 0.95rem; }
+        
+        /* Zona interactiva con JavaScript */
+        .interactive-zone { background-color: #1e293b; padding: 40px; border-radius: 12px; border: 1px solid #334155; margin-bottom: 40px; }
+        .interactive-zone h2 { margin-bottom: 15px; color: #f8fafc; }
+        .btn { background-color: #38bdf8; color: #0f172a; border: none; padding: 12px 24px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; transition: background 0.3s; }
+        .btn:hover { background-color: #0ea5e9; }
+        #demo-status { margin-top: 15px; font-size: 1.1rem; color: #34d399; font-weight: 600; min-height: 27px; }
+        
+        /* Pie de página */
+        footer { margin-top: 8px; color: #64748b; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <h1>¡Hola! Mi página web está funcionando</h1>
-    <p>Este es mi sitio web gratuito en GitHub Pages.</p>
+
+    <div class="container">
+        <!-- Encabezado -->
+        <header>
+            <h1>DISTROMASTER</h1>
+            <p class="subtitle">Arquitectura de Soluciones Productivas & Desarrollo de Software</p>
+        </header>
+
+        <!-- Sección de Módulos / Características -->
+        <div class="grid">
+            <div class="card">
+                <h3>🛡️ Seguridad Integral</h3>
+                <p>Monitoreo continuo de componentes y sistemas optimizados para garantizar la protección absoluta de tus datos.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Auditoría Inteligente</h3>
+                <p>Módulos avanzados diseñados para identificar la causa exacta de fallas operativas y proporcionar guías automáticas de solución.</p>
+            </div>
+            <div class="card">
+                <h3>🚀 Máxima Eficiencia</h3>
+                <p>Estructuras dinámicas creadas para la optimización de procesos informáticos y el incremento del rendimiento digital.</p>
+            </div>
+        </div>
+
+        <!-- Componente Interactivo (Acción Frontend) -->
+        <div class="interactive-zone">
+            <h2>Prueba de Módulo de Simulación</h2>
+            <p style="color: #94a3b8; margin-bottom: 20px;">Presiona el botón para ejecutar una verificación estática del sistema mediante JavaScript en tu navegador.</p>
+            <button class="btn" onclick="ejecutarSimulacion()">Iniciar Diagnóstico</button>
+            <div id="demo-status"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Distromaster. Todos los derechos reservados. Alojado de forma segura en GitHub Pages.</p>
+        </footer>
+    </div>
+
+    <!-- Script de JavaScript compatible con GitHub Pages -->
+    <script>
+        function ejecutarSimulacion() {
+            const statusDiv = document.getElementById('demo-status');
+            statusDiv.style.color = '#38bdf8';
+            statusDiv.innerText = 'Iniciando ciclos de prueba analítica...';
+            
+            setTimeout(() => {
+                statusDiv.style.color = '#34d399';
+                statusDiv.innerText = '✔ Todos los componentes estáticos responden correctamente (200 OK).';
+            }, 1500);
+        }
+    </script>
 </body>
 </html>
